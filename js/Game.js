@@ -8,15 +8,14 @@ class Game{
                       new Phrase("Wolf on wall street"),
                       new Phrase("Despite making"),
                       new Phrase("Karen took the kids"),
-                      new Phrase("alright about to head out"),];
+                      new Phrase("alright about to head out")];
       this.activePhrase = null;
     }
 
-    getRandomPhrase(this.phrases)
+    getRandomPhrase()
     {
-
-      return Math.floor(Math.random()*this.phrases.length);
-
+      //returns 5 of the random phrases
+      return this.phrases[Math.floor(Math.random()*this.phrases.length)];
     }
 
 
