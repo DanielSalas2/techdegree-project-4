@@ -19,4 +19,14 @@ class Game{
     }
 
 
+    startGame()
+    {
+      let hid = document.getElementById('overlay');
+      hid.style.display = "none";
+      let phrs = this.getRandomPhrase();
+      phrs.addPhraseToDisplay();
+      this.activePhrase = phrs;
+    }
+
+
 }
