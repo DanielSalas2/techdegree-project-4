@@ -29,8 +29,15 @@ class Game{
     }
     checkForWin()
     {
-      /*This method checks to see if the player has revealed all of the
-      letters in the active phrase.*/
+      let divy = document.getElementById("phrase");
+      let list = divy.getElementsByTagName("li");
+      for (let i = 0; i < list.length; i++)
+      {
+        // loop over all found letterElements and add class show to its existing classes
+      return  list[i].classList.contains('show');
+      }
+
+
     }
     removeLife()
     {

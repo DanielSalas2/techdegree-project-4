@@ -24,12 +24,15 @@ checkLetter(letter)
 {
   return this.phrase.includes(letter);
 }
-showMatchedLetter()
+showMatchedLetter(letter)
 {
-  /*Reveals the letter(s) on the board that matches the
-player's selection. To reveal the matching letter(s), select all of the letter DOM
-elements that have a CSS class name that matches the selected letter and
-replace each selected element's `hide` CSS class with the `show` CSS class.*/
+  const letterElements = document.getElementsByClassName(letter);
+  for (let i = 0; i < letterElements.length; i++)
+  {
+    // loop over all found letterElements and add class show to its existing classes
+    letterElements[i].classList.add('show');
+  }
+
 }
 
 }
