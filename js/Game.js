@@ -41,13 +41,19 @@ class Game{
     }
     removeLife()
     {
+
+      let loss = document.getElementById("scoreboard");
+      let loss2 = loss.getElementsByTagName("img")[this.missed];
+      this.missed += 1;
+      return loss2.src="images/lostHeart.png";
+
       /*This method removes a life from the scoreboard, by replacing one
 of the `liveHeart.png` images with a `lostHeart.png` image (found in the `images`
 folder) and increments the `missed` property. If the player has five missed
 guesses (i.e they're out of lives), then end the game by calling the `gameOver()`
 method.*/
     }
-    gameOver()
+    gameOver(gameWon)
     {
     /*This method displays the original start screen overlay, and
 depending on the outcome of the game, updates the overlay `h1` element with a
